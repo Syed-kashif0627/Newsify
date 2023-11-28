@@ -1,0 +1,59 @@
+{
+    "status": "ok",
+    "totalResults": 4,
+    "articles": [
+    {
+    "source": {
+    "id": "business-insider",
+    "name": "Business Insider"
+    },
+    "author": "Kai Xiang Teo",
+    "title": "The mayor of Paris is making a loud exit from X, calling the platform a 'gigantic global sewer'",
+    "description": "\"This platform and its owner intentionally exacerbates tensions and conflicts,\" Anne Hidalgo, the mayor of Paris, wrote on X.",
+    "url": "https://www.businessinsider.com/paris-mayor-leaves-x-twitter-elon-musk-gigantic-global-sewer-2023-11",
+    "urlToImage": "https://i.insider.com/656554ebc58b6f84123acb75?width=1200&format=jpeg",
+    "publishedAt": "2023-11-28T04:32:00Z",
+    "content": "Paris mayor Anne Hidalgo and X owner and chief technology officer Elon MuskChesnot and Kirsty Wigglesworth - WPA Pool via Getty Images\r\n<ul><li>Paris Mayor Anne Hidalgo says she's leaving X after 14 … [+2518 chars]"
+    },
+    {
+    "source": {
+    "id": "al-jazeera-english",
+    "name": "Al Jazeera English"
+    },
+    "author": "Erin Hale",
+    "title": "Hong Kong’s arrested pro-democracy activists face long wait for judgement",
+    "description": "Closing arguments are due to begin in high-profile trial of 16 pro-democracy figures nearly three years after arrests.",
+    "url": "https://www.aljazeera.com/news/2023/11/28/hong-kongs-arrested-pro-democracy-activists-face-long-wait-for-judgement",
+    "urlToImage": "https://www.aljazeera.com/wp-content/uploads/2023/11/GettyImages-1233867616-1701130909.jpg?resize=1920%2C1440",
+    "publishedAt": "2023-11-28T03:17:23Z",
+    "content": "Taipei, Taiwan Closing arguments are due to begin in Hong Kong on Wednesday in the high-profile trial of 16 pro-democracy activists and legislators, more than 1,000 days after they were arrested by n… [+6202 chars]"
+    },
+    {
+    "source": {
+    "id": "marca",
+    "name": "Marca"
+    },
+    "author": "BAZAR",
+    "title": "Black Friday en Amazon y AliExpress: los chollos que aún puedes comprar con descuentos de hasta el 96%",
+    "description": "El Black Friday ha terminado, pero no en todos los productos: estas son las mejores ofertas que todavía puedes comprar en Amazon y en AliExpress, que alarga su 'viernes negro' hasta el 30 de noviembre  Leer",
+    "url": "https://www.marca.com/regalos-promociones/2023/11/28/6564d33d46163f0a768b45b9.html",
+    "urlToImage": "https://phantom-marca.unidadeditorial.es/8f3b67557c3d173be216b61f198b715e/resize/1200/f/webp/assets/multimedia/imagenes/2023/11/27/17011077886160.jpg",
+    "publishedAt": "2023-11-28T00:16:04Z",
+    "content": "El mes de noviembre es el mes de los descuentos, así que la fiesta de las ofertas no ha terminado. En Amazon todavía hay muchos chollos que comprar a precio de ganga, y el otro gigante del e-commerce… [+20334 chars]"
+    },
+
+    {
+    "source": {
+    "id": "ign",
+    "name": "IGN"
+    },
+    "author": "Eric Song",
+    "title": "Buy a $100 Apple Gift Card, Get $15 in Amazon Credit for Cyber Monday",
+    "description": "The best Cyber Monday gift card deal",
+    "url": "https://www.ign.com/articles/cyber-monday-deal-2023-buy-a-100-apple-gift-card-get-15-in-amazon-credit",
+    "urlToImage": "https://assets-prd.ignimgs.com/2023/11/25/applegc-1700938191891.jpg?width=1280",
+    "publishedAt": "2023-11-28T03:35:00Z",
+    "content": "Amazon's best gift card deal for Cyber Monday ends tonight. Purchase a $100 Apple gift card and get $15 in bonus Amazon credit. For digital gift cards, use promo code \"APPLET5USA\". For physical gift … [+1496 chars]"
+    } 
+    ]
+    }
