@@ -33,15 +33,19 @@ export class News extends Component {
         document.title=`${this.captilize(this.props.category)}- Newsify`
     }
     async udpdateNews(){
-      const url=`https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=b7749c9e1895443c99b9f38027c1456b&page=${this.state.page}&pageSize=${this.props.pageSize}`
+      this.props.setProgress(10);
+      const url=`https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=${this.props.apiKey}&page=${this.state.page}&pageSize=${this.props.pageSize}`
       this.setState({loading:true})
       let data=await fetch(url);
+      this.props.setProgress(30);
       let parseddata=await data.json();
+      this.props.setProgress(70);
       this.setState({
               articles:parseddata.articles,
               totalResults:parseddata.totalResults,
-              loading:false
+              loading:false,
       })
+      this.props.setProgress(100);
     }
     async componentDidMount(){
           this.udpdateNews();
@@ -57,14 +61,14 @@ export class News extends Component {
     // }
     fetchMoreData=async ()=>{
       this.setState({page:this.state.page+1})
-      const url=`https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=b7749c9e1895443c99b9f38027c1456b&page=${this.state.page}&pageSize=${this.props.pageSize}`
+      const url=`https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=${this.props.apiKey}&page=${this.state.page}&pageSize=${this.props.pageSize}`;
       let data=await fetch(url);
       let parseddata=await data.json();
       this.setState({
               articles:this.state.articles.concat(parseddata.articles),
               totalResults:parseddata.totalResults,
       })
-    }
+    };
     
   render() {
     return (
@@ -74,18 +78,18 @@ export class News extends Component {
           <InfiniteScroll
             dataLength={this.state.articles.length}
             next={this.fetchMoreData}
-            hasMore={this.state.articles.length !==this.state.totalResults}
-            loader={<Spinner/>}>
+            hasMore={this.state.articles.length !== this.state.totalResults && this.state.articles.length < this.state.totalResults}
+            loader={<Spinner/>}
+          >
           <div className="container">
             <div className="row">
-                {this.state.articles.map((ele)=>{
-                return <div className="col md-4" key={ele.url}>
-                    <Newsitem  title={ele.title?ele.title:""} description={ele.description?ele.description:""} newsUrl={ele.url} author={ele.author} date={ele.publishedAt} source={ele.source.name} imageUrl={ele.urlToImage?ele.urlToImage:'https://www.searchenginejournal.com/wp-content/uploads/2023/10/ai-image-generation-651e811857e33-sej.png'}/>
-                </div>
-                      
+                {this.state.articles.map((ele,index)=>{
+                return <div className="col-md-4" key={index}>
+                    <Newsitem  title={ele.title?ele.title:""} description={ele.description?ele.description:""} imageUrl={ele.urlToImage} newsUrl={ele.url} author={ele.author} date={ele.publishedAt} source={ele.source.name} />
+                </div>      
                 })}
               </div>
-            </div>
+          </div>
           </InfiniteScroll>
             {/* {!this.state.loading && <div className="container d-flex justify-content-between">
               <button disabled={this.state.page<=1} type="button" class="btn btn-dark" onClick={this.handleprevClick}>&larr;Previous</button>
